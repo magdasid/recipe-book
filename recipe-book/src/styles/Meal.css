@@ -1,0 +1,15 @@
+.Recipe-description {
+    padding: 1% 4%;
+    display: flex;
+}
+.Recipe-info {
+    text-align: left;
+    padding: 2% 2% 2% 1%;
+}
+.Recipe-instructions {
+    padding: 0% 4% 3% 4%;
+    text-align: justify;
+}
+.img {
+    width: 300px;
+}
