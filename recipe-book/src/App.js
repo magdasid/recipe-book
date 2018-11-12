@@ -17,7 +17,7 @@ class App extends Component {
     return (
       <div className="App" >
         <section className="Search Search-box">
-          <h1>Show me yummy recipes</h1>
+          <h1>Show me yummy recipes 👩‍🍳</h1>
           <MealForm onSubmit={this.addNewMeal}/>
         </section>
         <section className="Search Search-results">

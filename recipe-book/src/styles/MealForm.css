@@ -1,0 +1,14 @@
+.form-input {
+    padding: 10px 15px;
+    margin: 8px 2px;
+    border: 1px solid #FEE12B;
+}
+
+.text-input {
+    width: 50%;
+}
+
+.submit-button {
+    width: 10%;
+    background-color: #FEE12B;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import '../styles/MealForm.css';
 
 class MealForm extends React.Component {
     state = {
@@ -19,11 +20,12 @@ class MealForm extends React.Component {
             <div>
                 <form onSubmit={this.handleSubmit}>
                     <input 
+                        className = "form-input text-input"
                         type="text" 
                         value = {this.state.mealName}
                         onChange={(event)=>this.setState({mealName: event.target.value}) }
-                        placeholder="find a meal" />
-                    <button type="submit">Find</button>
+                        placeholder="meal name" />
+                    <button className= "form-input submit-button" type="submit">Find</button>
                 </form>
             </div>
         );
