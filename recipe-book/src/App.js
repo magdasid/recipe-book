@@ -3,24 +3,26 @@ import './App.css';
 import MealList from './components/MealList';
 import MealForm from './components/MealForm';
 
-
 class App extends Component {
   state = {
     meals: []
   }
   addNewMeal = (mealInfo) => {
-    console.log("meal info" +mealInfo);
+    console.log("meal info" + mealInfo);
     this.setState({
       meals: mealInfo
     });
-    //console.log(this.state.meals);
   }
   render() {
     return (
-      <div className="App">
-        <h1>Find a receipe</h1>
-        <MealForm onSubmit={this.addNewMeal}/>
-        <MealList meals={this.state.meals}/>
+      <div className="App" >
+        <section className="Search Search-box">
+          <h1>Show me yummy recipes</h1>
+          <MealForm onSubmit={this.addNewMeal}/>
+        </section>
+        <section className="Search Search-results">
+          <MealList meals={this.state.meals}/>
+        </section>
       </div>
     );
   }

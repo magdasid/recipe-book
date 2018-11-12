@@ -1,6 +1,10 @@
-body {
-  margin: 0;
-  padding: 0;
+body, html {
+  margin: 0 auto;
+  background: url("photos/background-banana-blue-616839.jpg") no-repeat center center fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -moz-background-size: cover;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
