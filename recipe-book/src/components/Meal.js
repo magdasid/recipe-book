@@ -4,7 +4,7 @@ import ReactHtmlParser from 'react-html-parser';
 
 const Meal = (props) => {
     return(
-        <div className="Recipe-box">
+        <div className="Recipe-box Search Search-results">
             <h2>{props.strMeal}</h2>
             <div className="Recipe-description">
                 <div>

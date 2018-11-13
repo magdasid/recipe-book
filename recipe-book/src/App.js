@@ -31,7 +31,7 @@ class App extends Component {
           <CategoryList onClick={this.addNewMeal}/>
           <MealForm onSubmit={this.addNewMeal}/>
         </section>
-        <section className="Search Search-results">
+        <section>
           <MealList meals={this.state.meals}/>
         </section>
       </div>
