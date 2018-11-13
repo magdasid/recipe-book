@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import './App.css';
 import MealList from './components/MealList';
 import MealForm from './components/MealForm';
+import CategoryList from './components/CategoryList';
 import axios from 'axios';
 
 class App extends Component {
   state = {
     meals: []
   }
-
   componentDidMount() {
     axios.get('https://www.themealdb.com/api/json/v1/1/random.php')
     .then(res => {
@@ -28,6 +28,7 @@ class App extends Component {
       <div className="App" >
         <section className="Search Search-box">
           <h1>Show me yummy recipes 👩‍🍳</h1>
+          <CategoryList />
           <MealForm onSubmit={this.addNewMeal}/>
         </section>
         <section className="Search Search-results">
