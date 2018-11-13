@@ -8,6 +8,7 @@ class App extends Component {
   state = {
     meals: []
   }
+
   componentDidMount() {
     axios.get('https://www.themealdb.com/api/json/v1/1/random.php')
     .then(res => {
@@ -18,7 +19,6 @@ class App extends Component {
     });
   }
   addNewMeal = (mealInfo) => {
-    console.log("meal info" + mealInfo);
     this.setState({
       meals: mealInfo
     });
@@ -37,6 +37,5 @@ class App extends Component {
     );
   }
 }
-
 
 export default App;

@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/Meal.css';
+import ReactHtmlParser from 'react-html-parser';
 
 const Meal = (props) => {
     return(
@@ -9,14 +10,14 @@ const Meal = (props) => {
                 <div>
                     <img src={props.strMealThumb} width="300" alt="meal_picture"/>
                 </div>
-                <div class="Recipe-info">
+                <div className="Recipe-info">
                     <h3>meal category: {props.strCategory}</h3>
                     <h3>origin: {props.strArea}</h3>
                 </div>
             </div>
             <div className="Recipe-instructions">
                 <h4>Instructions</h4>
-                {props.strInstructions}
+                { ReactHtmlParser(props.strInstructions.replace(/(?:\r\n|\n)/g, '<br><br>')) }
             </div>
         </div>
     );

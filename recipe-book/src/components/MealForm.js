@@ -10,9 +10,7 @@ class MealForm extends React.Component {
         event.preventDefault();
         axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${this.state.mealName}`)
         .then(res => {
-            console.log(res.data.meals);
             this.props.onSubmit(res.data.meals);
-            //this.setState({ mealName: '' });
         });
     }
     render() {
