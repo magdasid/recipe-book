@@ -5,6 +5,13 @@ class CategoryList extends React.Component {
     state = {
         categories: []
     }
+    handleClick = (category, event) => {
+        event.preventDefault();
+        axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`)
+        .then(res => {
+            this.props.onClick(res.data.meals);
+        });
+    }
     componentDidMount() {
         axios.get('https://www.themealdb.com/api/json/v1/1/list.php?c=list')
         .then(res => {
@@ -17,7 +24,7 @@ class CategoryList extends React.Component {
     }
     render() {
         return (
-            <ul>{this.state.categories.map(category => <li key={category.strCategory}>{category.strCategory}</li>)}</ul> 
+            <div>{this.state.categories.map(category => <button onClick={(event) => this.handleClick(category.strCategory, event)} key={category.strCategory}>{category.strCategory}</button>)}</div>
         );
     }
 }
