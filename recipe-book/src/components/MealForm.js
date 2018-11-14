@@ -10,7 +10,12 @@ class MealForm extends React.Component {
         event.preventDefault();
         axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${this.state.mealName}`)
         .then(res => {
-            this.props.onSubmit(res.data.meals);
+            const meal = res.data.meals;
+            if (meal != null) {
+                this.props.onSubmit(meal);
+            } else {
+                this.props.onSubmit([{ info: "Brak przepisu w bazie :("}]);
+            }
         });
     }
     render() {
