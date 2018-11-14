@@ -1,10 +1,12 @@
 .Recipe-description {
     padding: 1% 4%;
-    display: flex;
 }
 .Recipe-info {
-    text-align: left;
-    padding: 0% 2% 2% 1%;
+    text-align: center;
+    padding: 0% 2%;
+}
+.Recipe-info h3 {
+    font-size: 1em;
 }
 .Recipe-instructions {
     padding: 0% 4% 3% 4%;
